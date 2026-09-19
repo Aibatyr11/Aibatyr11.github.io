@@ -26,7 +26,6 @@
   @media (prefers-color-scheme: dark) {
     body { color: #e6e6e6; background: #121212; }
     hr { border-color: #333; }
-    code { background: #222; }
   }
   h1 { font-size: 1.6rem; margin-top: 2.5rem; }
   h2 { font-size: 1.15rem; margin-top: 2rem; }
@@ -34,7 +33,11 @@
   .lead { font-size: 1.05rem; }
   ul { padding-left: 1.2rem; }
   li { margin: .35rem 0; }
-  code { padding: .1rem .3rem; border-radius: .2rem; background: #f0f0f0; font-size: .9em; }
+  /* Без заливки намеренно: фон с фиксированным цветом невидим, когда браузер
+     сам затемняет страницу (Chrome умеет это делать поверх любых стилей),
+     и слово превращается в пустой прямоугольник. Моноширинный жирный
+     читается при любой теме. */
+  code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-weight: 700; }
   hr { margin: 3rem 0; border: none; border-top: 1px solid #ddd; }
   a { color: inherit; }
 </style>
